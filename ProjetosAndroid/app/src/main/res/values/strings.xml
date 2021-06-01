@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="seja_bem_vindo_ao_sistema">Seja bem-vindo ao sistema</string>
+    <string name="desconto_simples">Desconto Simples</string>
+    <string name="juros_composto">Juros Composto</string>
+    <string name="juros_simples">Juros Simples</string>
+    <string name="calcular">Calcular</string>
+</resources>
