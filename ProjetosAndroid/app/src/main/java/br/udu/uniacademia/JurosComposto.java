@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 //M = C (1+i)t
 //M: montante
 //C: capital
@@ -29,6 +31,9 @@ public class JurosComposto extends AppCompatActivity {
 
         Button calcularJC = findViewById(R.id.btCalcularJC);
         calcularJC.setOnClickListener(calcularJurosComposto);
+
+        FloatingActionButton voltarJC = findViewById(R.id.btVoltarJC);
+        voltarJC.setOnClickListener(voltarClick);
     }
 
     private View.OnClickListener calcularJurosComposto = new View.OnClickListener() {
@@ -55,4 +60,14 @@ public class JurosComposto extends AppCompatActivity {
             }
         }
     };
+
+    private View.OnClickListener voltarClick = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent voltar = new Intent(JurosComposto.this, MainActivity.class);
+            startActivity(voltar);
+            finish();
+        }
+    };
+
 }

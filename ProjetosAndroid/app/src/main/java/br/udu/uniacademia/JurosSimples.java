@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class JurosSimples extends AppCompatActivity {
 
     @Override
@@ -28,6 +30,9 @@ public class JurosSimples extends AppCompatActivity {
 
         Button calcular = findViewById(R.id.btCalcular);
         calcular.setOnClickListener(calcularJuros);
+
+        FloatingActionButton voltarJC = findViewById(R.id.btVoltarJS);
+        voltarJC.setOnClickListener(voltarClick);
 
     }
 
@@ -54,6 +59,15 @@ public class JurosSimples extends AppCompatActivity {
             finish();
             }
 
+        }
+    };
+
+    private View.OnClickListener voltarClick = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent voltar = new Intent(JurosSimples.this, MainActivity.class);
+            startActivity(voltar);
+            finish();
         }
     };
 

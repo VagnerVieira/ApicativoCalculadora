@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener clickJurosComposto = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+
             Intent viewJurosComposto = new Intent(MainActivity.this, JurosComposto.class);
             startActivity(viewJurosComposto);
             finish();
@@ -46,9 +47,11 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener clickDescontoSimples = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+
             Intent viewDescontoSimples = new Intent(MainActivity.this, DescontoSimples.class);
             startActivity(viewDescontoSimples);
             finish();
         }
     };
+
 }
